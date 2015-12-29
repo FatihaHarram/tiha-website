@@ -1,0 +1,1337 @@
+@charset "utf-8";
+
+/********************************************************************************************************************
+										FONT
+*********************************************************************************************************************/	
+							
+@font-face {
+    font-family: 'robotothin';
+    src: url('roboto-thin-webfont.eot');
+    src: url('roboto-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('roboto-thin-webfont.woff2') format('woff2'),
+         url('roboto-thin-webfont.woff') format('woff'),
+         url('roboto-thin-webfont.ttf') format('truetype'),
+         url('roboto-thin-webfont.svg#robotothin') format('svg');
+
+    font-weight: normal;
+    font-style: normal;
+
+}
+ 
+@font-face {
+    font-family: 'Marcellus SC';
+    src: url('marcellussc-regular-webfont.eot');
+    src: url('marcellussc-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('marcellussc-regular-webfont.woff2') format('woff2'),
+         url('marcellussc-regular-webfont.woff') format('woff'),
+         url('marcellussc-regular-webfont.ttf') format('truetype'),
+         url('marcellussc-regular-webfont.svg#marcellus_scregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+ 
+@font-face {
+    font-family: 'Sketch Rockwell';
+    src: url('sketchrockwell-bold-webfont.eot');
+    src: url('sketchrockwell-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('sketchrockwell-bold-webfont.woff2') format('woff2'),
+         url('sketchrockwell-bold-webfont.woff') format('woff'),
+         url('sketchrockwell-bold-webfont.ttf') format('truetype'),
+         url('sketchrockwell-bold-webfont.svg#sketch_rockwellregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/*
+
+    -webkit- (pour Chrome, Safari,…)
+    -moz- (pour Firefox, Flock,…)
+    -o- (pour Opera)
+    -ms- (pour Internet Explorer)
+
+
+*/
+
+
+/********************************************************************************************************************
+										BALISES COULEURS
+*********************************************************************************************************************/	
+							
+red{
+	color: #990066;
+}
+green{
+	color: #96CA2D;
+}
+black{
+	color: black;
+}
+white{
+	color: white; 
+}
+gris{
+	color: #8B8590;
+}
+or{
+	color:#BD8D46;
+}
+
+
+/********************************************************************************************************************
+									CSS BODY / CONTENT
+*********************************************************************************************************************/	
+html, body{
+	background-image:url(../img/grunge_wall.png);
+	font-family: 'Marcellus SC', sans-serif;
+	/*font-family: 'Trebuchet ms', serif;*/
+	color: black;
+	font-size: 1em;
+	max-width: 100%;
+
+	/*margin: 0; new*/
+	/*padding:0; /*new*/
+}
+a{	list-style-type: none;
+	text-decoration: none;
+	color: black;
+}
+a:hover{
+	list-style-type: none;
+	text-decoration: none;
+	color: black;
+
+}
+p{color: black;}
+
+input{color: black; font-family: 'robotothin', sans-serif;}
+
+#content{ 
+	padding-top: 75px;
+	margin: auto;
+	max-width: 100%;
+	/*margin-left: 7%;*/
+	width: 100%;
+	height: auto;
+	left: 5%;
+
+}
+
+#index{
+	overflow: hidden;
+	width: 100%;
+	height: auto;
+
+
+}
+
+
+/********************************************************************************************************************
+										IMAGE PARALLAX 1
+*********************************************************************************************************************/	
+							
+#vide{
+	width: 200%;
+	height: 55%;
+	background-image:url(../img/black_paper.png);
+	opacity: 0.5;
+	position: absolute;
+	top: 100%;
+	left:-100px;
+	display: block;
+	
+}
+/********************************************************************************************************************
+										IMAGE PARALLAX 2 
+*********************************************************************************************************************/	
+							
+#vide2{
+	width: 200%;
+	height: 40%;
+	background-image:url(../img/black_paper.png);
+	opacity: 0.5;
+	position: absolute;
+	top: 300%;
+	left:-100px;
+	display: block;
+	
+}
+
+/********************************************************************************************************************
+										ACCEUIL
+*********************************************************************************************************************/	
+#acceuil{
+	margin-left: 18%;
+}
+
+/********************************************************************************************************************
+										PRESENTATION
+*********************************************************************************************************************/	
+							
+#presentation{
+	position: absolute;
+	margin-top: 100%;
+	width: 60%;
+	height: auto;
+	margin-left: 18%;
+	font-size: 1em;
+	padding-top: 7%;
+
+}
+
+.pres{
+	position: absolute;
+	width: 30%;
+	text-align: justify;
+	margin-top: 2%;
+	display: block;	
+}
+
+#branding{left: 0;}
+#webd{left: 35%;}
+#identity{left: 75%;}
+.lign{border-bottom: #8B8590 solid 0.2em ; padding-bottom: 3%;} 
+
+/********************************************************************************************************************
+										MON CV
+*********************************************************************************************************************/	
+							
+#cv{
+	position: absolute;
+	top: 380%;
+	width: 50%;
+	height: auto;
+	left: 18%;
+	font-size: 15px;
+	padding-top: 1%;
+	padding-bottom: 3%;
+	display: block;
+}
+
+#cv #img_cv{
+	width: 50%;
+	height: 50%;
+}
+#cv a{
+	margin-left: 5%;
+	text-decoration: none;
+}
+#cv a span{
+     position:absolute;
+     margin-top:20%;
+     margin-left:10%;
+     background:rgba(0,0,0,.9);
+     padding:15px;
+     border-radius:3px;
+     box-shadow:0 0 2px rgba(0,0,0,.5);
+     transform:scale(0) rotate(-12deg);     
+     transition:all .25s;   
+     opacity: 0;       
+}
+#telecharger :hover{
+	color:#C0C0C0;
+}
+#cv a:hover span, a:focus span{
+     transform:scale(1) rotate(0); 
+     opacity:1;  
+     color: white;     
+}
+
+/********************************************************************************************************************
+										H1 ET TITRE
+*********************************************************************************************************************/	
+h1{
+	color: #000000; 
+}
+.titre{
+	font-size: 1.5em;
+}
+
+/********************************************************************************************************************
+										NAVIGATION
+*********************************************************************************************************************/	
+.header{
+/*margin: 0;tes à voir!*/
+
+}						
+#nav{
+	display: inline-block;
+	width: 100%;
+	height: 100px;
+	background-image:url(../img/black_paper.png);
+	position: fixed;
+	/*margin-top: -2%;*/
+	z-index: 1000;
+	opacity: 1;
+	font-size: 1em;
+}
+#nav ul{
+	text-decoration: none;
+	list-style-type: none;
+	width: 100%;
+	margin: auto;
+	margin-left: 20%;
+
+}
+#nav li{
+	display: inline-block;	
+	margin-top: 2%;
+
+}
+#nav li a{
+	text-decoration: none;
+	list-style-type: none;
+	display: block;
+	color: #C0C0C0;
+	padding: 15px;
+}
+#nav li a:hover {
+  color: black;
+  /*background: rgba(255,255,255,0.2);*/
+  text-decoration: none;
+  /*height: 50px;*/
+  background-color: inherit;
+}
+#nav li a input{
+	width: 100%;
+	height: 40px;
+	margin-top: -3%;
+	letter-spacing: 1px;
+	font-style: normal;
+	font-family: 'Marcellus SC';
+	color: black;
+}
+#nav li a input:hover{
+	border: #8B8590 solid 1px;
+	box-shadow: 0 0 3px #8B8590;
+}
+.header__icon{display: none;}
+
+/********************************************************************************************************************
+										ICONES POUR ESPACE CLIENT / ADMIN
+*********************************************************************************************************************/			
+#espace_client{
+	position: absolute;
+	margin-left: 20%;
+	width:53px; 
+	height: auto;
+	margin-top:0%;
+}
+
+#espace_client img{
+	width:150%; 
+	height: 150%; 
+}
+.popup {
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  color: white;
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+  padding: 5px 10px;
+  position: absolute;
+  text-align: center;
+  z-index: 1999;
+}
+.popup:after {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  border-top-color: rgba(0, 0, 0, 0.8);
+  border-width: 5px;
+  margin-left: -5px;
+}
+
+.popup a {
+  color:black;
+  display: inline-block;
+  font-family: ;
+  margin-left: 3px;
+  margin-top: 3px;
+  padding: 10px;
+}
+
+
+
+/********************************************************************************************************************
+										CITATIONS
+*********************************************************************************************************************/							
+#cit1, #cit2, #cit3, #cit4, #cit5, #cit6{
+	position: absolute;
+	color: black;
+	font-size: 1.5em;
+
+}
+#cit1{
+	margin-top: -1.5%;
+	margin-left: -80%;
+	
+}
+
+#cit2{
+	margin-left: 18%;
+	margin-top: 25%;
+	display: none;
+}
+
+#cit3{
+	margin-top: 40%; 
+	margin-left: 120%;
+	width: 700px;
+	height: 100px;
+}
+#cit4, #cit5, #cit6{display: none; }
+
+
+
+
+/********************************************************************************************************************
+										MON TITRE MOI
+*********************************************************************************************************************/							
+#moi{
+	position: absolute;
+	top:12%;
+	left: -5%;
+	width: 100%;
+	height: 20%;
+	font-family: 'Sketch Rockwell';
+	/*font-family: 'Roboto-Thin' ;*/
+	font-size: 4em;
+	text-align: center;
+	z-index: 1;
+}
+#moi span { 
+    display: inline-block;
+    -webkit-transition: all 0.2s ease-out;
+}
+#moi span:hover {
+    -webkit-transform: scale(1.3);
+    color: #4430C6;
+    cursor: pointer;
+}
+
+
+
+/************************************************************************************************************************
+										MON IMAGE DE PRESENTATION
+*************************************************************************************************************************/				
+#pic, #pic1{
+	top: 150%;
+	margin-left: 12%;
+	width: 30rem;
+	height: 30rem;
+	border-radius: 50%;
+	position: absolute;
+	opacity: 0.8;
+	z-index: 2;
+	overflow: hidden;
+}
+
+div#pic {
+  display: flex;
+  justify-content: space-between;
+}
+
+div#pic figure {
+  display: inline-block;
+  margin-left: 2rem;
+}
+
+div#pic figure div {
+  border-radius: 50%;
+  overflow: hidden;
+  background-blend-mode: luminosity;
+  background-color: black;
+  border: 5px solid #000;
+  width: 25rem;
+  height: 25rem;
+  transition: .4s linear;
+}
+
+div#pic figure div:hover {
+  border: 8px solid #f7f7f7;
+  background-color: transparent;
+}
+
+div#pic figcaption {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.parker {
+  background: url(../img/fh.jpg) no-repeat center hsl(200, 100%, 100%);
+  background-size: cover;
+
+}	
+
+
+
+/********************************************************************************************************************
+										FORMULAIRES INSCRIPTION/ CONNECTION / ADMINISTRATION / CLIENT
+*********************************************************************************************************************/	
+#com{ 				/*titre h1 dans la page inscription /connection users*/
+	position: absolute;
+	top:16%;
+	left: 0;
+	margin: auto;
+	width: 100%;
+	height: 20%;
+	font-family: 'Sketch Rockwell';
+	/*font-family: 'Roboto-Thin' ;*/
+	font-size: 2.8em;
+	text-align: center;
+	z-index: 1;
+}
+
+.erreur_php{ 				/*mention des erreurs dans les formulaires*/
+	font-size: 0.8em;	
+}
+.erreur_message{
+	font-size: 0.8em;	
+}
+form span{
+	color : #990066;
+}
+
+
+#formulaires{ 				/*Formulaires en général*/
+	position: absolute;
+	margin: auto;
+	width: 90%;
+	height: auto;
+	left: 20%;
+}
+
+
+#formulaires h2{ 			/*Les titres h2 des formulaires*/
+	text-shadow:0px 0px 1px #AAA;
+	color: #C0C0C0;
+}
+#inscriptionForm{
+	display: ;
+}
+#inscription{ 				/*formulaire pour l'inscription*/
+	position: absolute;
+	width: 24%;
+	margin-top: 10%;
+	margin-left: 15%;
+	padding: 2%;
+	/*background-image: url(../img/black_paper.png);*/
+	background-color: #666666;
+	box-shadow: 5px 5px 0px #AAA;
+	border-radius: 5px;
+}
+#inscription fieldset{ 		/*le fieldset du formulaire inscription*/
+	padding: 20px;
+}
+
+#inscr{ 					/*la petite mention "si vous êtes inscrit, connectez vous"*/
+	position: absolute;
+	margin-top: 27%;
+	margin-left: 5%;		/**********************N'EXISTE PLUS*****************************************/
+	list-style-type: none;
+	text-decoration: none;
+
+	cursor: pointer;
+	font-size: 1.2rem;
+}
+#connection{ 				/*formulaire de connection pour les users*/
+	position: absolute;
+	width: 24%;
+	margin-top: 10%;
+	margin-left: 15%;
+	padding: 2%;
+	display: block;
+	float: right;
+	/*background-image: url(../img/black_paper.png);*/
+	background-color: #666666;
+	box-shadow: 5px 5px 0px #AAA;
+	border-radius: 5px;	
+}
+#con{						/*la petite mention qui dit "si vous n'êtes pas inscrit, inscrivez vous"*/
+	position: absolute;
+	margin-top: 27%;
+	margin-left: 35%;			/**********************N'EXISTE PLUS*****************************************/
+	list-style-type: none;
+	text-decoration: none;
+	cursor: pointer;
+	display: block;
+	font-size: 1.2rem;
+}
+#connection fieldset{		/*le fieldset du formulaire connection*/
+	padding: 20px;
+
+}
+
+.connectionEC, .connectionAdm{		/*formulaire de l'espace client et de la connection de l'administrateur*/
+	position: absolute;
+	display: block;
+	width: 24%;
+	margin-top: 8%;
+	margin-left: 17%;
+	padding: 0px 5px;
+	background-color: #666666;
+	box-shadow: 5px 5px 0px #AAA;
+	border-radius: 5px;	
+	color: #C0C0C0;
+	padding: 2%;
+}
+.connectionAdm{margin-top: 0;}
+
+#fiche_client{				/*DIV ou se situe LA FICHE CLIENT DANS admin.php*/
+	position: absolute;
+	width: 24%;
+	height: auto;
+}
+#commande_client,#myOrder, #modifCommande{	/*DIV ou se situe LA commande client DANS admin.php + l'état de la commande dans vip.php + la modification de commande*/
+	position: absolute;
+	width: 40%;
+	height: auto;
+	margin-left: 40%;
+}
+
+#modifCommande{
+	margin-top: 6%;
+}
+
+#show_clientForm, #show_clientOrder,#show_pd,#show_myOrder,#changeOrder,#deleteCom{			/*Bouton d'affichage de la fiche client et la fiche commande client*/
+	position: fixed;
+	width: 24%;
+}
+.commandes, .clients{
+	margin-top: 6%;
+}
+.deleteCom{ 
+margin-top: 12%;}
+
+
+#show_clientForm:hover, #show_clientOrder:hover,#show_pd:hover,#show_myOrder:hover, #changeOrder:hover, #deleteCom:hover{ 	/*Bouton hover d'affichage de la fiche client et la fiche commande client*/
+	width: 28%;
+	background-color: black;
+	color:white;
+} 
+
+#add_client{			/*formulaire de la fiche client pour l'administrateur*/
+	display: none;
+	position: absolute;
+	width: 100%;
+	margin-top: 0;
+	margin-left: 0;
+	float: left;
+	/*background-image: url(../img/black_paper.png);*/
+	background-color: #666666;
+	box-shadow: 5px 5px 0px #AAA;
+	border-radius: 5px;	
+	/*text-shadow:0px 0px 1px #AAA;*/
+	color: #C0C0C0;
+	padding: 10%;
+}
+#add_order,#changeOrderForm{				/*formulaire de la fiche Commande add+change pour l'administrateur*/
+	display: none;
+	position: absolute;
+	width: 100%;
+	margin-top: 0;
+	margin-left: 0;
+	float: left;
+	/*background-image: url(../img/black_paper.png);*/
+	background-color: #666666;
+	box-shadow: 5px 5px 0px #AAA;
+	border-radius: 5px;	
+	/*text-shadow:0px 0px 1px #AAA;*/
+	color: #C0C0C0;
+	padding: 5%;
+}
+
+#changeOrderForm{
+	margin-top: -20%;
+}
+#personanDataTB{			/*Table d'affichage de la fiche client (données personnelles)*/
+	display: none;
+	position: absolute;
+	width: 40%;
+	height: auto;
+	background-color: #666666;
+	box-shadow: 5px 5px 0px #AAA;
+	color: #C0C0C0;
+	padding: 2%;
+	border-radius: 5px;	
+}
+
+
+
+
+
+
+/********************************************************************************************************************
+										TABLE D'AFFICHAGE DE LA COMMANDE (L'ETAT DE LE COMMANDE CLIENT)
+*********************************************************************************************************************/	
+
+#container_order{position: absolute; left: 0;}
+#client_client{position:absolute;  top: -150px;} /*positionnement du tableau client*/
+#order_order{position: absolute;margin-top: -100px;} /*positionnement du tableau commandes*/
+
+#myOrderTB{				/*Table d'affichage de la commande (l'état de commande du client)*/
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: auto;
+	background-color: #666666;
+	box-shadow: 5px 5px 0px #AAA;
+	color: #C0C0C0;
+	padding: 3%;
+	border-radius: 5px;	
+	display: block;
+
+}
+
+.tabOrder tr , .profil td {
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	padding-left: 0.2em;
+   	padding-right: 2em;
+   	width: 200px;
+}
+
+table.tabOrder{
+   	border-collapse:collapse;
+    width: 70%;
+    padding: 0.5em;
+    border: 1px solid;
+    margin: auto;
+    margin-top: 2%;
+    box-shadow: 7px 7px 5px 0px #17212F;
+}
+#profil{
+	margin: 7%;
+
+
+}
+.profil{
+	margin-top: 2%;
+	margin-left: 5%;
+	margin-bottom: 10%
+	
+}
+
+
+td.noir{
+    color: #eeeeee;
+    background-color: #303030 ;
+    width: 100%;
+}
+#txt{
+	color: #303030;
+}
+
+
+
+
+
+
+
+/********************************************************************************************************************
+									PROGRESS BAR CIRCLE (VIP.PHP)
+*********************************************************************************************************************/	
+ #svg circle, #svg1 circle, #svg2 circle, #svg3 circle, #svg4 circle,#svg5 circle, #svg6 circle {
+
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 3s linear;
+  stroke: #990066;
+  stroke-width: 0.5em;
+}
+#svg #bar, #svg1 #bar1, #svg2 #bar2, #svg3 #bar3, #svg4 #bar4, #svg5 #bar5, #svg6 #bar6 {
+  stroke: #FF9F1E;
+}
+#cont, #cont1, #cont2, #cont3, #cont4,#cont5, #cont6 {
+  display: block;
+  height: 10px;
+  width: 10px;
+  margin: 3.5em 0;
+  box-shadow: 0 0 0em black;
+  border-radius: 100%;
+  position: relative;
+}
+
+#cont:after, #cont1:after, #cont2:after,#cont3:after, #cont4:after,#cont5:after, #cont6:after {
+  position: absolute;
+  display: block;
+  height: 80px;
+  width: 80px;
+  left: 25%;
+  top: 25%;
+  /*box-shadow: inset 0 0 0em black;*/
+  content: attr(data-pct)"%";
+  margin-top: 8px;
+  margin-left: 8px;
+  border-radius: 100%;
+  line-height: 80px; /*80*/
+  font-size: 1.2em;
+  text-align: center;
+  color: white;
+}
+
+input{ /*tout les input*/
+	width: 100%;
+	height: 40px;
+	width: 100%;
+	margin: 5px 0px 10px 0px;
+}
+label{ /*tout les label*/
+	color: #C0C0C0;
+}
+fieldset{ /*tout les fieldset*/
+	margin-bottom: 5px;
+}
+input[type=submit]{ /*tout les input du type submit*/
+	background-color: #CCCCCC;
+	height: 50px;
+	width: 100%;
+	border: none;
+	font-weight: 400;
+	font-style: normal;
+	letter-spacing: 2px;
+	color: ;
+	border-radius: 5px;
+	font-family: 'Marcellus SC';
+}
+
+
+
+
+
+/********************************************************************************************************************
+										TITRE DE L'ESPACE CLIENT
+*********************************************************************************************************************/	
+									
+#espcl{
+	position: absolute;
+	top:18%;
+	left: -5%;
+	margin: auto;
+	width: 100%;
+	height: 20%;
+	font-family: 'Sketch Rockwell';
+	/*font-family: 'Roboto-Thin' ;*/
+	font-size: 2.8em;
+	text-align: center;
+	z-index: 1;
+}
+
+
+
+
+
+
+/********************************************************************************************************************
+										FORMULAIRE POUR LES COMMENTAIRES
+*********************************************************************************************************************/	
+								/****formulaire commentaires*****/
+#formCom{
+	position: absolute;
+	width: 55%;
+	height: auto;	
+	margin-top: 0%;
+	margin-left:0;
+	padding: 2%;
+	display: block;
+	float: left;
+	/*background-image: url(../img/black_paper.png);*/
+	background-color: #666666;
+	box-shadow: 5px 5px 0px #AAA;
+	border-radius: 5px;
+
+}
+
+#formCom h3{	text-shadow:0px 0px 1px #AAA;
+	color: #C0C0C0;
+}
+
+#comment{
+	width: 80%;
+	border-radius: 5px;
+	margin-left: 10%;
+	margin-top: 3%;
+}
+#formCom input{
+	width: 81%;
+	margin-left: 10%;
+	margin-bottom: 5%;
+}
+#comment input :hover{
+	border: #990066 solid 1px;
+	box-shadow: 2px 2px 2px #990066 ;
+}
+
+
+
+
+
+
+
+
+/********************************************************************************************************************
+										LIVRE D'OR
+
+*********************************************************************************************************************/	
+								
+.com{ 
+	position: relative;
+	margin-top:0;
+	left: 0;
+	width: 120%;
+	height: 20%;
+	font-family: 'Sketch Rockwell';
+	/*font-family: 'Roboto-Thin' ;*/
+	font-size: 2.8em;
+	text-align: center;
+	z-index: 1;
+	color: red;
+	list-style-type: none;
+	text-decoration: none;
+}
+
+
+
+
+
+/********************************************************************************************************************
+										AFFICHAGES COMMENTAIRES
+*********************************************************************************************************************/	
+								/*Affichage des commentaires*******/
+#affichage{
+	position: relative;
+	margin-bottom: 3%;
+	margin-left: 10%;
+	width: 70%;
+	float: left;
+	margin-top: 3%;
+}
+
+#affichage h1{
+	font-family:'Sketch Rockwell';
+	font-size: 2.6em;
+	margin-left: 30%;
+	color: ;
+	margin-top: 0;
+
+}
+								/*HEure des commentaires******/
+.marge{
+	float: right;
+	margin-right: 18%;
+}
+
+
+
+
+
+								
+/********************************************************************************************************************
+										BOUTON POUR LAISSER UN COMMENTAIRE
+*********************************************************************************************************************/	
+/*Bouton pour laisser un commentaire************/							
+#laisserCom{				
+	position: fixed;
+	float: left;
+	margin-top: 5%;
+	display: block;
+	margin-left:75%;
+	width: 15%;
+	height: 50px;
+	cursor: pointer;
+		
+	/*z-index: 1500;*/
+}
+#laisserCom input {
+	cursor: pointer;
+	letter-spacing: 0.5px;
+	font-size: 0.9em;
+	font-weight: bold;
+	border-radius: 10px;
+}
+
+#laisserCom input:hover {
+	border: 1px solid #BD8D46;
+	box-shadow: 0 0 3px  #BD8D46;
+	background-color: #AAA;
+	/*background-image: url(../img/black_paper.png);*/
+	color: #BD8D46;
+
+}
+
+
+
+
+
+								
+/********************************************************************************************************************
+										LIVRE D'OR / COMMENTAIRES
+
+*********************************************************************************************************************/
+
+.txt {
+	padding-left: 0px;
+}
+
+#arrows {
+  position: relative;
+  width: 85%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  text-decoration: none;
+  list-style-type: none;
+}
+#arrows li { /*bulle de commentaire*/
+  position: relative;
+  width: calc(100% - 100px);
+  height: auto;
+  margin-top: 20px;
+  margin-left: -1%;
+  background: #AAA;
+  font-size: 0.8em;
+  color: ;
+  line-height: 30px;
+  text-align: ;
+  padding-left: 500px;
+  text-transform: uppercase;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 2px 2px 0px #737073;
+}
+#arrows li:before {	/*pointe transparante du commentaire*/
+  content: '';
+  position: absolute;
+  border-width: 15px;
+  border-style: solid;
+  border-color: transparent; 
+}
+#arrows li.top:before {
+  top: 0;
+  left: 50%;
+  border-bottom-color: #AAA;
+  -webkit-transform: translate(-50%, -90%);
+      -ms-transform: translate(-50%, -90%);
+          transform: translate(-50%, -90%);
+}
+#arrows li.top-left:before { /*pointe du commentaire*/
+  top: 10px;
+  left: 25px;
+  border-left-color: #AAA;
+  border-bottom-color: #AAA;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+h3{	margin-left: 5.4%; }
+		
+
+
+
+
+
+
+
+
+/********************************************************************************************************************
+												PORTFOLIO
+*********************************************************************************************************************/												
+
+/* font awesome icons */
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+/* open sans font */
+@import url("//fonts.googleapis.com/css?family=Open+Sans");
+.post-content {
+ 	-webkit-box-sizing: border-box;
+ 	-moz-box-sizing: border-box;
+  	box-sizing: border-box;
+}
+#filter {
+  text-align: center;
+  padding: 15px;
+  margin-left: 0;
+  margin-top: 2%;
+}
+#filter button {
+  border: 0;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 5px 20px;
+  border-radius: 10%;
+}
+#filter button.active {
+  background-color: #666666;
+  color:white;
+}
+#filter button:focus {
+  outline: 0;
+}
+#posts {
+  max-width: 1900px;
+  margin-left: 5%;
+  margin-right: 3%;
+  margin-top: 2%;
+}
+#posts .post {
+  width: 25%;
+  float: left;
+  height: 250px;
+  overflow: hidden;
+  text-align: center;
+  cursor: ;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  background: #2e5d5a;
+}
+#posts .post img {
+  position: relative;
+  display: block;
+  width: -webkit-calc(100% + 30px);
+  width: calc(100% + 30px);
+  opacity: 1;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-30px, 0, 0) scale(1.12);
+  transform: translate3d(-30px, 0, 0) scale(1.12);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  min-height: 100%;
+}
+#posts .post:hover img {
+  opacity: 0.5;
+  -webkit-transform: translate3d(0, 0, 0) scale(1);
+  transform: translate3d(0, 0, 0) scale(1);
+}
+#posts .post .post-content {
+  padding: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+#posts .post .post-content::before,
+#posts .post .post-content::after {
+  pointer-events: none;
+}
+
+#posts .post .post-content,
+#posts .post a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#posts .post a {
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+}
+
+#posts .post h2 {
+  word-spacing: -0.15em;
+  font-weight: 300;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 1em 1.2em;
+}
+
+#posts .post h2,
+#posts .post p {
+  margin: 0;
+}
+
+#posts .post p {
+  letter-spacing: 1px;
+  font-size: 68.5%;
+  padding: 0 10px 0 0;
+  width: 50%;
+  border-right: 1px solid #fff;
+  text-align: right;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-40px, 0, 0);
+  transform: translate3d(-40px, 0, 0);
+}
+
+#posts .post:hover p {
+  opacity: 1;
+  color: white;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+@media screen and (max-width: 600px) {
+  #posts .post {
+   width: 50%;
+  }
+}
+
+
+
+
+
+
+
+/********************************************************************************************************************
+										FORMULAIRE DE CONTACT
+*********************************************************************************************************************/		
+.dim:hover{
+  	margin-top:2%;
+	opacity:0.8;
+	filter:alpha(opacity=80); /* For IE8 and earlier */
+}
+#container {
+  margin:auto;
+  width:65%;
+  margin-bottom:2%;
+  overflow:auto;
+  margin-top: 2%;
+}
+#header_contact {
+  width:40%;
+  font-size:1em;
+  font-weight:300;
+  padding:10px;
+  text-align:left;
+  background:none;
+  overflow:auto;
+  float:left;
+  color:black;
+}
+
+#header_contact p{
+  font-family: 'Lato', calibri, arial;
+  font-size:1em;
+  font-weight:300;
+  text-align:left;
+  color:black;
+}
+
+/* Below is the design for the contact form */
+#contact-wrap {
+  	font-family: 'Lato', calibri, arial;
+  	font-size:1em;
+  	font-weight:300;
+  	width: 50%;
+  	color:black;
+	overflow:auto; 
+	float:left;
+}
+#contact-area {
+	margin-left:1%;
+	width: 25%;
+	padding:2%;
+}
+#contact-area input, #contact-area textarea {
+	padding: 3%;
+	width:300%;
+  	font-family: 'Lato', calibri, arial;
+  	font-size:0.9em;
+ 	font-weight:300;
+  	color:black;
+    background-color:transparent;
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-bottom: 1px solidblack;
+    border-right: 1px solid transparent;
+  	margin-bottom:15px;
+}
+
+#contact-area textarea {
+	height: 150px;
+    background-color:transparent;
+  	border-top: 1px solid transparent;
+  	border-left: 1px solid transparent;
+  	border-bottom: 1px solidblack;
+  	border-right: 1px solid transparent;
+  	color: black;
+}
+#contact-area textarea:focus, #contact-area input:focus {
+	background-color:#D8D8D8 ;
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-bottom: 1px solid black;
+    border-right: 1px solid transparent;
+}
+#contact-area input.submit-button {
+  font-family: 'Lato', calibri, arial;
+  font-size:12px;
+  font-weight:300;
+  text-transform:uppercase;
+	width: 100px;
+	float: left;
+  background-color:transparent;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  
+    	-moz-transition:all 0.1s ease-in-out;
+	-webkit-transition:all 0.1s ease-in-out;
+	-o-transition:all 0.1s ease-in-out;
+	-ms-transition:all 0.1s ease-in-out;
+	transition:all 0.1s ease-in-out;
+}
+
+#contact-area input.submit-button:hover {
+  color:#404040  ;
+  background-color:#AAA;
+}
+
+::-webkit-input-placeholder {
+  color: #404040  ;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: #404040  ; 
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: #404040  ;
+:-ms-input-placeholder {  
+   color: #404040  ;  
+}
+
+
+/*fin*/
+
+
+/*
+#orTitle{
+	background-color: white;
+	mix-blend-mode: screen;
+}*/
+
+
+
+/********************************************************************************************************************
+														MEDIA QUERIES
+*********************************************************************************************************************/
+/*
+	Voir page responsive.css
+
+*/
+
+
+
+

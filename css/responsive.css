@@ -1,0 +1,723 @@
+@media (max-width: 1650px){
+
+/********************************************************************************************************************
+										IMAGE PARALLAX 1
+*********************************************************************************************************************/	
+							
+#vide{
+	
+	height: 25%;	
+}
+/********************************************************************************************************************
+										IMAGE PARALLAX 2 
+*********************************************************************************************************************/	
+							
+#vide2{
+height: 0;	
+}
+
+/********************************************************************************************************************
+												MEDIA Q 1200px
+*********************************************************************************************************************/	
+@media (max-width: 1200px){
+
+/********************************************************************************************************************
+										NAVIGATION
+*********************************************************************************************************************/	
+
+	#nav ul{ margin-left: 15%;}
+
+	
+/********************************************************************************************************************
+										ACCEUIL
+*********************************************************************************************************************/	
+							
+#acceuil{margin-left: 0;}
+
+/********************************************************************************************************************
+										PRESENTATION
+*********************************************************************************************************************/	
+							
+#presentation{
+	margin-top: 80%;
+	margin-left: 0;	
+}
+.pres{
+
+	display: none;	
+}
+/********************************************************************************************************************
+										CITATIONS
+*********************************************************************************************************************/	
+#cit2{margin-top: 19%;}
+#cit3{ margin-top: 37%; }
+
+
+/************************************************************************************************************************
+										MON IMAGE DE PRESENTATION
+*************************************************************************************************************************/	
+#pic, #pic1{
+	margin-top: 49%;
+}
+
+/********************************************************************************************************************
+										IMAGE PARALLAX 1
+*********************************************************************************************************************/								
+
+#vide2{display: none;}
+
+
+
+
+
+
+/********************************************************************************************************************
+										MON CV
+*********************************************************************************************************************/							
+#cv{
+	margin-top: 180%;
+	margin-left: 0;
+}
+
+
+
+/********************************************************************************************************************
+												PORTFOLIO
+*********************************************************************************************************************/		
+
+#posts {
+  max-width: 1200px;
+  margin-left: 5%;
+  margin-right: 3%;
+  margin-top: 2%;
+}
+
+
+
+
+}									/**********fin Media Q 1200px************/
+
+
+
+
+
+
+
+/********************************************************************************************************************
+												MEDIA Q 960PX
+*********************************************************************************************************************/	
+@media (max-width: 960px){
+
+/********************************************************************************************************************
+										GENERAL
+*********************************************************************************************************************/	
+	html,body {
+        -ms-text-size-adjust: none;
+        -webkit-text-size-adjust: none;  }
+	#index{overflow: hidden;  }
+/********************************************************************************************************************
+										TITRE MOI (HARRAM FATIHA) DANS L'ACCUEIL
+*********************************************************************************************************************/	
+	#moi{ font-size: 2.5em;}
+
+/********************************************************************************************************************
+										NAVIGATION
+*********************************************************************************************************************/	
+	#nav{ 
+		display:block;
+		width: 100%; 
+		height: auto;
+		position: fixed; }
+	#nav li{
+		display:block; 
+		margin: 0; 
+		padding-bottom: 5px; }
+	#nav ul{margin-left: 5%; padding: 2%; }
+	#nav li a{padding: 5px; 
+		font-size: 0.8em; 
+		color: white; }
+	.nav{display: none; }
+
+	#espace_client img{	width:30px;	height: auto;}
+	#espace_client{display: inline-block; width:70px; height: auto; margin:0;}
+	.clientIcon{ left: 5px; }
+	.adminIcon{ left: 250px; bottom: 5px;}
+	.header__icon{
+		position: relative;
+		display: block;
+		float: left;
+		width: 100%;
+		height: auto;
+		cursor: pointer;
+		top: 0;
+		left: 0;}
+/*input se déconnecter*/
+	#deconnecter{width:30%;}
+
+/********************************************************************************************************************
+										IMAGE DU PARALLAX
+*********************************************************************************************************************/	
+	#vide {display: none;}
+#vide2 {display: none;}
+/********************************************************************************************************************
+										IMAGE DE PRESENTATION
+*********************************************************************************************************************/	
+	div#pic figure div{ 
+		display: none; 
+		width: 9rem; 
+		height: 9rem; }
+	#pic{ 
+		display:; 
+		width: 12rem; 
+		height: 12rem; 
+		margin-top:700px; 
+		margin-left: 20%; }
+	#pic2{
+		display: block; 
+		width: 12rem; 
+		height: 12rem;  }
+	div#pic2 figure div{ 
+		display: block; 
+		width: 12rem; 
+		height: 12rem;}
+
+/********************************************************************************************************************
+									TITRE ACCEUIL
+*********************************************************************************************************************/	
+	#acceuil h1{
+		position: relative; 
+		margin-top: 7%; } /*font-size: 2.2em; }*/
+/********************************************************************************************************************
+										CITATIONS
+*********************************************************************************************************************/	
+	#cit1{ display:none ; margin-top: 58%; font-size: 1.2em;}
+	#cit2{display:none; margin:-200px;font-size: 1em;}
+	#cit3 {display:none; width: 90%; margin-top: 65%; margin-left: 100%;font-size: 1em;}
+	#cit4, #cit5, #cit6{display:block;font-size: 1.2em;padding: 10%; margin: auto; margin-left: 150px; 	}
+	#cit4{margin-top: 110px;}
+	#cit5{margin-top: 200px;}
+	#cit6{margin-top: 300px;}
+/********************************************************************************************************************
+										PRESENTATION
+*********************************************************************************************************************/	
+	#presentation{margin-top: 120%;position: relative; width: 100%; height: auto; margin-left: 5px; font-size: 0.9em;}
+
+/********************************************************************************************************************
+										MON CV
+*********************************************************************************************************************/
+	#cv{top: 120%; width: 100%; height: 110%;}
+
+/********************************************************************************************************************
+										PORTFOLIO
+*********************************************************************************************************************/
+
+	#posts{margin-left: 5%;}
+
+/********************************************************************************************************************
+										CONTACT
+*********************************************************************************************************************/
+#header_contact{
+	position: absolute;
+	width: 80%;
+}
+#contact-wrap{
+	position: absolute;
+	width: 100%;
+	top: 70%;
+	float: left;
+	}
+/********************************************************************************************************************
+										LIVRE D'OR
+*********************************************************************************************************************/
+#arrows{ width: 100%; }
+#arrows li { width: 100%; }
+#laisserCom{width: 50%; float: left ; margin-left: 25%; top: 5%; position: absolute;}
+#affichage{margin-top: 10%;}
+#orTitle{display: none;}
+
+/********************************************************************************************************************
+										FORMULAIRES INSCRIPTION/ CONNECTION / ADMINISTRATION / CLIENT
+*********************************************************************************************************************/	
+/*formulaires*/
+#formulaires h2{ font-size: 1em;}		/*Les titres h2 des formulaires*/
+#formulaires{margin-top: 5%;}
+#connection, #inscription,#formCom{width: 60%;}
+/*mention*/
+#con,#inscr{margin-top: 60%; margin-left: 15%;} /*petite mention pas encore inscrit?*/
+#inscr{margin-top: 70%;}
+/*inscription*/
+#inscription{margin-left: 0;}
+
+
+/*boutons ADMIN*/
+.show_clientForm{top: 30%; float: left;font-size: 0.8em;width: 30%;}
+.clients{top: 40%; float: left;font-size: 0.8em;width: 30%;}
+.show_clientOrder{top: 30%;left: 50%; float: right;font-size: 0.8em;width: 30%;}
+.show_changeOrder{top: 48%;left: 50%; float: right;font-size: 0.8em;width: 30%;}
+.commandes{top:60%;left: 50%; float: right;font-size: 0.8em;width: 30%; }
+
+#fiche_client input,#commande_client input, #modifCommande input {}
+#fiche_client input:hover,#commande_client input:hover, #modifCommande input:hover {}
+
+
+/*formulaire ajout client*/
+#fiche_client{width: 80%; left: 10%;}
+#add_client{width: 80%;}
+	/*croix de fermeture */
+.close{left: 9%; top:17%;}
+
+/*formulaire ajout commande*/
+#commande_client,#modifCommande{width: 90%; left: -30%;}
+#add_order,#changeOrderForm{width: 90%;left: 0;}
+#add_order select, #add_order textarea, #changeOrderForm select, #changeOrderForm textarea{width: 100%;}
+
+	/*croix de fermeture */
+.close1, .close2{left: 6%; top:2%;}
+
+/*connection client et administrateur*/
+#connectionAdm, #connectionEC{width: 100%; top:0;left: 0;}
+.connectionEC, .connectionAdm{width: 60%; top:20%;left: 5%;}
+.connectionAdm{top: 30%}
+/*titre de l'espace client et de l'espace admin*/
+#espcl{font-size: 2em;}
+/********************************************************************************************************************
+									PAGE D'ADMINISTRATION CLIENTS
+*********************************************************************************************************************/	
+#client_client{position:absolute;  left:5px; margin-top: -650px; width: 15%; font-size: 0.8em;} /*positionnement du tableau client*/
+#order_order{position:absolute;  left:5px; margin-top: -120px; width: 15%; font-size: 0.8em;} /*positionnement du tableau client*/
+
+/********************************************************************************************************************
+									VIP Espace client
+*********************************************************************************************************************/	
+/*boutons*/
+#show_pd,#show_myOrder{width: 30%;}
+/*crois*/
+#close_PD,#close3{left: 0; top: 8%;}
+#close3{top: 0;}
+
+/*tableau*/
+#personanData{width: 50%;}
+#personanDataTB{width: 50%;}
+#myOrder{left: 10%;width: 45%;}
+
+
+
+
+
+
+}
+
+							/**********fin Media Q 960px************/
+
+
+
+
+
+
+
+
+/********************************************************************************************************************
+												MEDIA Q 768PX
+*********************************************************************************************************************/	
+/*
+Cible ici les tablettes et autres périphériques avec une largeur max de 768px
+*/
+
+@media only screen and (max-width: 768px){
+	#cit4, #cit5, #cit6{margin-left: 50px;  	}
+
+
+/********************************************************************************************************************
+										PORTFOLIO
+*********************************************************************************************************************/
+	#filter{margin-left: 2px; width: 100%;}
+/********************************************************************************************************************
+										CONTACT
+*********************************************************************************************************************/
+#header_contact{
+	position: absolute;
+	width: 80%;
+}
+#contact-wrap{
+	position: absolute;
+	width: 100%;
+	top: 90%;
+	float: left;
+	}
+
+/********************************************************************************************************************
+										LIVRE D'OR
+*********************************************************************************************************************/
+#arrows{ width: 100%; }
+#arrows li { width: 100%; }
+#laisserCom{width: 60%;  top: 8%; }
+#affichage{margin-top: 15%;}
+
+/********************************************************************************************************************
+										FORMULAIRES INSCRIPTION/ CONNECTION / ADMINISTRATION / CLIENT
+*********************************************************************************************************************/	
+/*les formulaires*/
+#formulaires{margin-top: 5%; left: 15%;}
+#connection,#inscription,#formCom {width: 80%;}
+/*titre*/
+#com{font-size: 2.2em;}
+/*mentions*/
+#con, #inscr{margin-top: 80%; margin-left: 18%; font-size: 1em;} /*petite mention pas encore inscrit?*/
+#inscr{margin-top: 90%;}
+/*inscription*/
+#inscription{margin-left: 0;}
+
+.adminContainer h1{font-size: 1.5em;}
+
+/*boutons ADMIN*/
+.show_clientForm{top: 20%;}
+.clients{top: 30%; }
+.show_clientOrder{top: 50%; }
+.show_changeOrder{top: 60%; }
+.commandes{top:70%;}
+#deleteCom{top: 80%;}
+
+#deleteCom , #fiche_client input,#commande_client input, #modifCommande input {width: 90%; left: 5%; }
+#deleteCom:hover, #fiche_client input:hover,#commande_client input:hover, #modifCommande input:hover {width: 90%;}
+
+/*formulaire ajout client*/
+#fiche_client{width: 90%; left: 10%;}
+#add_client{width: 90%;}
+	/*croix de fermeture */
+.close{left: 9%; top:17%;}
+
+/*formulaire ajout commande*/
+#commande_client, #modifCommande{width: 90%; left: -30%;}
+#add_order,#changeOrderForm{width: 90%;left: 0;}
+#add_order select, #add_order textarea, #changeOrderForm select, #changeOrderForm textarea {width: 100%;}
+#changeOrderForm{top: 10%;}
+
+	/*croix de fermeture */
+.close1,.close2 {left: 2%; top:1%;}
+
+
+/*connection client et administrateur*/
+#connectionAdm, #connectionEC{width: 100%; top:0;left: 0;}
+.connectionEC, .connectionAdm{width: 90%; top:25%;left: -10%;}
+.connectionAdm{top: 30%}
+/*titre de l'espace client et de l'espace admin*/
+#espcl{font-size: 2em;}
+
+
+/********************************************************************************************************************
+									VIP Espace client
+*********************************************************************************************************************/
+
+
+/*boutons*/
+#show_pd,#show_myOrder,#fiche_com{font-size: 0.8em;}
+#show_myOrder{ }
+#show_myOrder:hover,#show_pd:hover{width: 30%;}
+/*crois*/
+
+
+/*tableau*/
+#personanDataTB{width: 70%;font-size: 0.9em;}
+#myOrder{width: 70%;}
+#myOrderTB{width: 100%;font-size: 0.9em; left: -50%;}
+
+
+#vide {display: none;}
+#vide2 {display: none;}
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+						/**********fin Media Q 768px************/
+
+
+
+
+
+
+
+
+
+
+/********************************************************************************************************************
+												MEDIA Q 360PX
+*********************************************************************************************************************/	
+/*
+Cible ici les gsm/smartphone et autres périphériques avec une largeur max de 360px
+*/
+@media (max-width: 360px){
+
+/********************************************************************************************************************
+										GENERAL
+*********************************************************************************************************************/	
+	html,body {
+        -ms-text-size-adjust: none;
+        -webkit-text-size-adjust: none;}
+	#index{overflow: auto; width: 100%;}
+	input{font-size: 0.8em;}
+/********************************************************************************************************************
+										TITRE MOI (HARRAM FATIHA) DANS L'ACCUEIL
+*********************************************************************************************************************/	
+	#moi{ font-size: 1.9em; left: 2%;}
+	.container_index{width: 500px; overflow: auto;}
+
+/********************************************************************************************************************
+										NAVIGATION
+*********************************************************************************************************************/	
+	#nav{display:block;
+		width: 100%; 
+		height: auto;
+		position: fixed;
+	}
+	#nav li{display:block; 
+		margin: 0; 
+		padding-bottom: 5px;
+	}
+	#nav ul{margin-left: 5%; padding: 2%;
+	}
+	#nav li a{padding: 5px; 
+		font-size: 0.8em; 
+		color: white;
+	}
+	.nav{display: none;
+	}
+
+	#espace_client img{	width:30px;	height: auto;}
+	#espace_client{display: inline-block; width:70px; height: auto; margin:0;}
+	.adminIcon{ left: 200px;}
+	.header__icon{
+		position: relative;
+		display: block;
+		float: left;
+		width: 100%;
+		height: auto;
+		cursor: pointer;
+		top: 0;
+		left: 0;
+	}
+
+	/*input se déconnecter*/
+	#deconnecter{width:60%;}
+
+/********************************************************************************************************************
+										IMAGE DU PARALLAX
+*********************************************************************************************************************/	
+
+#vide {display: none;}
+#vide2 {display: none;}
+
+/********************************************************************************************************************
+										IMAGE DE PRESENTATION
+*********************************************************************************************************************/	
+	div#pic figure div{ display: none; 
+		width: 9rem; 
+		height: 9rem;
+	}
+	#pic{ display:; 
+		width: 12rem; 
+		height: 12rem; 
+		margin-top:700px; 
+		margin-left: 20%;
+	}
+	#pic2{display: block; 
+		width: 12rem; 
+		height: 12rem;
+	}
+	div#pic2 figure div{ 
+		display: block; 
+		width: 12rem; 
+		height: 12rem;
+	}
+	#acceuil h1{position: relative; 
+		margin-top: 7%;
+		} /*font-size: 2.2em; }*/
+
+	
+/********************************************************************************************************************
+										CITATIONS
+*********************************************************************************************************************/	
+	#cit1{ display:none;}
+	#cit2{display:none; }
+	#cit3{display:none; }
+	#cit4, #cit5, #cit6{display:block;font-size: 1em;padding: 10%; margin: auto; left: 2%;}
+	#cit4{margin-top: 0; }
+	#cit5{margin-top: 80px; }
+	#cit6{margin-top: 160px; }
+
+/********************************************************************************************************************
+										PRESENTATION
+*********************************************************************************************************************/	
+	#presentation{margin-top: 150%;position: relative;}
+
+/********************************************************************************************************************
+										MON CV
+*********************************************************************************************************************/
+	#cv{top:500%; margin-top: 200px;}
+
+/********************************************************************************************************************
+										FORMULAIRES INSCRIPTION/ CONNECTION / ADMINISTRATION / CLIENT
+*********************************************************************************************************************/	
+/*les formulaires*/
+#formulaires{margin-top: 25%; left: 15%;}
+#connection, #inscription,#formCom{width: 80%;}
+/*titre*/
+#com{font-size: 2.2em;}
+/*mentions*/
+#con, #inscr{margin-top: 150%; margin-left: 0; font-size: 1em;} /*petite mention pas encore inscrit?*/
+#inscr{margin-top: 190%;}
+/*formulaire d'inscription*/
+#inscription{margin-left: 0;}
+#titreComent{font-size: 1.1em;}
+
+
+/*boutons ADMIN*/
+.show_clientForm{top: 30%;}
+.clients{top: 40%;}
+.show_clientOrder{top: 60%;}
+.show_changeOrder{top: 70%;}
+.commandes{top:80%; }
+#fiche_client input,#commande_client input, #modifCommande input, {width: 90%; }
+#fiche_client input:hover,#commande_client input:hover, #modifCommande input:hover,{width: 90%; left: 5%;}
+
+	/*croix de fermeture */
+.close1, .close2{left: -5%; top:0;}
+
+
+/********************************************************************************************************************
+									VIP Espace client
+*********************************************************************************************************************/
+/*boutons*/
+#show_pd,#show_myOrder{width: 90%;left: 5%;}
+#show_myOrder{top:80%;  }
+#show_myOrder:hover,#show_pd:hover{width: 90%;}
+/*croix*/
+#close_PD,#close3{left: -8%; top: 8%;}
+#close3{top: 0;}
+
+/*tableau*/
+#personanData{width: 95%; }
+#personanDataTB{width: 95%;font-size: 0.9em; left: 2%}
+#myOrder{left: -40%;width: 100%;font-size: 0.9em}
+#myOrderTB{left: 0;}
+
+
+
+ 
+
+
+
+
+
+
+
+
+}
+
+									/**********fin Media Q 360px************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

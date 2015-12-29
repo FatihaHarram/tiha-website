@@ -1,0 +1,168 @@
+@charset "utf-8";
+
+/*font**********************/
+@font-face{
+	font-family: 'Roboto-Thin';
+	src:url('../font/Roboto-Thin.ttf');
+}
+@font-face{
+	font-family: 'Sketch Rockwell';
+	src:url('../font/SketchRockwell-Bold.ttf');
+}
+
+/*css body-content***************/
+body
+{
+	background-image:url(../img/grunge_wall.png);
+	font-family: 'Marcellus SC', sans-serif;
+	/*font-family: 'Trebuchet ms', serif;*/
+	color: black;
+	font-size: 16px;
+	overflow: hidden;
+	
+}
+
+#content{
+	padding-top: 75px;
+	margin: auto;
+	width: 960px;
+	overflow: hidden;
+}
+
+#tiha{
+	position: relative;
+	margin-top: 0;
+	margin-left: 2%;
+	width: 200px;
+	height: 50px;
+
+	
+	font-size: 50px;
+
+}
+/*#presentation{
+	position: absolute;
+	margin: auto;
+	width: 890px;
+	height: auto;
+	margin-top: 5%;
+	left: auto;
+	margin-left: 5%;
+}*/
+#presentation{
+	position: absolute;
+	margin-top: 100%;
+	margin-bottom: 20%;
+	width: 60%;
+	height: auto;
+	margin-left: 10%;
+}
+/*CSS h1*******************/
+h1{
+	color: #000000; 
+}
+
+.titre{
+	font-size: 25px;
+}
+
+
+/*css navigation***************/
+#nav
+{
+	display: inline-block;
+	margin:-1%;
+	width: 101%;
+	height: 100px;
+	background-image:url(../img/black_paper.png);
+	position: fixed;
+	margin-top: -2%;
+	z-index: 1000;
+	opacity: 1;
+}
+
+#nav ul{
+	text-decoration: none;
+	list-style-type: none;
+	width: 100%;
+	margin: auto;
+	float: left;
+	margin-left: 20%;
+}
+
+#nav li{
+	display: inline-block;
+	
+
+}
+
+#nav li a{
+	text-decoration: none;
+	list-style-type: none;
+	display: block;
+	color: #C0C0C0;
+	padding: 15px;
+}
+
+#nav li a:hover {
+  color: black;
+  /*background: rgba(255,255,255,0.2);*/
+  text-decoration: none;
+  /*height: 50px;*/
+}
+
+/******balises******/
+
+red{
+	color: #A62295;
+}
+black{
+	color: black;
+}
+
+/*citations*/
+#cit1{
+	position: absolute;
+	margin-left: -70%;
+}
+
+#cit2{
+	position: absolute;
+	margin-left: 18%;
+	margin-top: 24%;
+	display: none;
+}
+#cit3{
+	position: absolute;
+	margin-top: 40%;
+	margin-left: 120%;
+	width: 700px;
+	height: 100px;
+}
+
+#moi{
+	position: absolute;
+	top:15%;
+	left: 0;
+	margin: auto;
+	width: 100%;
+	height: 20%;
+	font-family: 'Sketch Rockwell';
+	/*font-family: 'Roboto-Thin' ;*/
+	font-size: 60px;
+	color: ;
+	text-align: center;
+	z-index: 1;
+
+}
+
+#pic{
+	position: absolute;
+	margin-top: 50%;
+	margin-left: 10%;
+	opacity: 0.8;
+	z-index: 2;
+}
+
+
+
