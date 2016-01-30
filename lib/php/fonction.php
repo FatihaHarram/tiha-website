@@ -13,7 +13,7 @@ require_once('config.php');
 		try{
 			//on se connecte à la base de donnée
 			//$connection=$connection=new PDO('mysql:host=193.37.145.62; dbname=tiha580311','tiha580311','imrane2206');
-			$connection=$connection=new PDO('mysql:host=localhost; dbname=websitehf','root','');
+			$connection=$connection=new PDO('mysql:host=localhost; dbname=websitehf','root','root');
 			//$connection=$connection=new PDO('mysql:host=193.37.145.62; dbname=tiha580311','tiha580311','imrane2206');	
 			//$connection = new PDO('mysql:host=localhost; dbname=harramfatihaportfolio', 'root', '');
 

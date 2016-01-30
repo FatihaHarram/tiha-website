@@ -112,7 +112,9 @@ session_start();
 					$adress		=	$_POST['adress'];
 					$phone		=	$_POST['phone']; 
 					$email 		= 	secureData($_POST['email']);
-					
+					$_SESSION['adress']=$adress;
+					$_SESSION['phone']=$phone;
+					$_SESSION['email']=$email;
 
 					$req=$connection->prepare('UPDATE clients SET adress="'.$adress.'", phone="'.$phone.'", email="'.$email.'" WHERE id = ?')->execute([$id]);
 

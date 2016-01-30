@@ -129,9 +129,13 @@ include_once('nav.php');
 									<td>'.$key['facturValue'].'%
 										<!-- <input type="text" id="facturValue" name="facturValue" value="'.$key['facturValue'].'" maxlength="200" placeholder=" %" style=""> -->
 									</td>
-									<td>'.$key['facturationData'].'
-										<!-- <input type="text" name="facturationData" value="'.$key['facturationData'].'" placeholder="facture" id="facturationData" > -->
-									</td>
+									<td>';
+									if ($key['facturationData']!="") {
+										echo '<a href="facture/'.$key['facturationData'].'">vue</a>
+										<!-- <input type="text" name="facturationData" value="'.$key['facturationData'].'" placeholder="facture" id="facturationData" > -->';
+									}
+									
+									echo '</td>
 									<td>'.$key['date'].'</td>
 									<!-- <td><a alt="modifier" href="orderTRT.php?action=2&id='.$key['id'].'"" ><img syle="float:right;" src="img/change.png"></a></td>-->
 									<td><a alt="Supprimer" href="orderTRT.php?action=1&id='.$key['id'].'"" ><img syle="float:right;" src="img/deleteRed.png"></a></td>

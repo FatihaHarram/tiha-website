@@ -6,7 +6,6 @@ if (isset($_POST['name_client'])) {
 
 		# on récupère les données entrées par l'utilisateur
 		$name_client = $_POST['name_client'];
-
 		//on se connecte
 		$connection = connectBD();
 
@@ -26,13 +25,13 @@ if (isset($_POST['name_client'])) {
 
 						//on affiche l'id
 						$id_client = $key['id'];
-						$name_client = $key['name_client'];
+						$name_client = $key['name'];
 
-						echo $id_client.', '.$name_client;
-						
+						// echo $id_client.', '.$name_client;
+						echo $id_client;
 									
 					}	
-					echo $id_client.', '.$name_client;
+					// echo $id_client.', '.$name_client;
 				}
 			} 
 			//si erreur

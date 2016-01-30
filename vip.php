@@ -241,14 +241,19 @@ session_start();
 												</td>
 											</tr>				
 										</table>
-										</br>
-														
-										Veuillez télécharger votre facture :
-											'.($key['facturationData']=='' ? '<white>Pas de facture disponible</white>' : '<white><b><a href="'.$key['facturationData'].'"> <green>Cliquez pour voir Votre Facture</green></a></b></white>').'
+										</br>';
+										if ($key['briefingValue']==100 || $key['okChValue']==100 || $key['envoiChValue']==100 || $key['designValue']==100 || $key['prodValue']==100 || $key['livraisonValue']==100 || $key['facturValue']==100) {				
+										echo 'Veuillez télécharger votre facture :
+											'.($key['facturationData']=='' ? '<white>Pas de facture disponible</white>' : '<white><b><a target="new" href="facture/'.$key['facturationData'].'"> <green>Cliquez pour voir Votre Facture</green></a></b></white>').'
 												<br><br>
 												<span class="txt"> la date de votre commande à été prise en charge le :<white><b> '.$key['date'].'</b></white></span><br></br>
 										</fieldset> 
 									</div> <!--order-->';
+								}
+									if ($key['briefingValue']==100 || $key['okChValue']==100 || $key['envoiChValue']==100 || $key['designValue']==100 || $key['prodValue']==100 || $key['livraisonValue']==100 || $key['facturValue']==100) {
+										echo "<span class='txt'><a id='download' style='border-radius: 3px;	color: padding:5px; #8B8590; background-color: #96CA2D;' target='new' href='facture/".$key['facturationData']."'>Téléchargement facture</a></span>";
+										# code...
+									}
 										}	
 								}	
 							}

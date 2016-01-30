@@ -1072,12 +1072,13 @@ $(document).ready(function(){
 	});
 
 	//pré-remplir l'ID client 
-	$('.name_client').blur(function(){
+	$('#name_clientU').blur(function(){
 		//var nom = $(this).val();
 		 //$( 'p' ).text( nom );
-		var name_client = $('.name_client').val();
-		var id_client = $('#id_client').val();
-
+		var name_client = $('#name_clientU').val();
+		// var id_client = $('#id_client').val();
+		var id_client = "";
+		// alert($(this).val());
 			valid = true;
 	 
 		   $.ajax({ // fonction permettant de faire de l'ajax
@@ -1086,11 +1087,10 @@ $(document).ready(function(){
 			   data: {name_client: name_client, id_client: id_client} , // données à transmettre
 			   success: function(results){ // si l'appel a bien fonctionné
 				   if (results){
-				   	$('p').text(results);
+				   	// $('p').text(results);
+				   	$('#id_client').val(results);
 				   		valid == false;
 
-				   	}else{
-				   		$('p').text('null');
 				   	}
 		
 				 				
@@ -1098,10 +1098,36 @@ $(document).ready(function(){
 		});
 		return false; // permet de rester sur la même page à la soumission du formulaire
 
-	})
+	});
 
+	//pré-remplir l'ID client 
+	$('#name_clientL').blur(function(){
+		//var nom = $(this).val();
+		 //$( 'p' ).text( nom );
+		var name_client = $('#name_clientL').val();
+		// var id_client = $('#id_client').val();
+		var id_client = "";
+		// alert($(this).val());
+			valid = true;
+	 
+		   $.ajax({ // fonction permettant de faire de l'ajax
+			   type: "POST", // methode de transmission des données au fichier php
+			   url: "autoId.php", // url du fichier php
+			   data: {name_client: name_client, id_client: id_client} , // données à transmettre
+			   success: function(results){ // si l'appel a bien fonctionné
+				   if (results){
+				   	// $('p').text(results);
+				   	$('#id_clientL').val(results);
+				   		valid == false;
 
+				   	}
+		
+				 				
+			   }
+		});
+		return false; // permet de rester sur la même page à la soumission du formulaire
 
+	});
 
 
 

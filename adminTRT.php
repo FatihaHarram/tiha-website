@@ -55,7 +55,7 @@ if(isset($_POST['add'])){
 					$connection-> BeginTransaction();
 
 					//si connection, on prépare la requête
-					$connection->exec('INSERT INTO clients VALUES(null,"'.$pseudo.'","'.$name.'","'.$firstname.'","'.$adress.'","'.$phone.'","'.$email.'","'.$mdp.'","'.$dateinscription.'","'.$admin.'","'.$client.'","'.$user.'","'.$token.'", null)');
+					$connection->exec('INSERT INTO clients (pseudo,name,firstname,adress,phone,email,mdp,dateinscription,admin,client,user,token) VALUES("'.$pseudo.'","'.$name.'","'.$firstname.'","'.$adress.'","'.$phone.'","'.$email.'","'.$mdp.'","'.$dateinscription.'","'.$admin.'","'.$client.'","'.$user.'","'.$token.'")');
 					// Insertion de la clé dans la base de données (à adapter en INSERT si besoin)
 					//validation de la transaction
 					$connection->commit();
@@ -104,12 +104,14 @@ if(isset($_POST['add'])){
 						//on renvoie à la page pour remplir le formulaire de commentaire
 						//header('refresh:3; url=admin.php');
 
-					}else{
-
-						var_dump(error_get_last());
-
-						exit('Votre message n\'a pas pu être envoyé');
 					}
+					header("location:espaceclient.php");
+					// else{
+
+					// 	var_dump(error_get_last());
+
+					// 	exit('Votre message n\'a pas pu être envoyé');
+					// }
 
 				}
 
