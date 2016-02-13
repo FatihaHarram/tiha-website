@@ -59,7 +59,8 @@ include_once('nav.php');
 									<td class="noir">User   </td>
 									<td class="noir">Active </td>
 									<td class="noir">Modifier </td>
-									<td class="noir">Effacer </td>';
+									<td class="noir">Effacer </td>
+									<td class="noir">Edit </td>';
 
 								//boucle pour récupérer les données	
 								foreach ($resultats as $key) 
@@ -81,6 +82,7 @@ include_once('nav.php');
 										<td>'.($key['active']=='' ? '0' : ''.$key['active']).'</td>
 										<td><a alt="modifier" href="orderTRT.php?action=4&id='.$key['id'].'"" ><img syle="float:right;" src="img/change.png"></a></td>
 										<td><a alt="Supprimer" href="orderTRT.php?action=2&id='.$key['id'].'"" ><img syle="float:right;" src="img/deleteRed.png"></a></td>
+										<td><a alt="edit" href="editClient.php?edit=4&id='.$key['id'].'"" ><img syle="float:right;" src="img/change.png"></a></td>
 									</legend>
 
 										</tr>';

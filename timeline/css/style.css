@@ -76,7 +76,7 @@
   top: 16px;
   left: 50%;
   margin-left: -25px;
-  background-color: #999999;
+  background-color:#96CA2D;;
   z-index: 100;
   border-top-right-radius: 50%;
   border-top-left-radius: 50%;
@@ -115,7 +115,7 @@
 }
 .timeline-title {
   margin-top: 0;
-  color: inherit;
+  color: #FFF;
 }
 .timeline-body > p,
 .timeline-body > ul {
