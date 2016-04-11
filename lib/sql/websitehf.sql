@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.12
+-- version 4.2.12deb2+deb8u1build0.15.04.1
 -- http://www.phpmyadmin.net
 --
--- Client :  localhost:8889
--- Généré le :  Mer 02 Septembre 2015 à 20:26
--- Version du serveur :  5.5.34
--- Version de PHP :  5.5.10
+-- Host: localhost
+-- Generation Time: Jan 30, 2016 at 07:11 AM
+-- Server version: 5.6.27-0ubuntu0.15.04.1
+-- PHP Version: 5.6.4-4ubuntu6.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,17 +17,18 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de données :  `websitehf`
+-- Database: `websitehf`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `clients`
+-- Table structure for table `clients`
 --
 
-CREATE TABLE `clients` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `clients` (
+`id` int(11) NOT NULL,
+  `pseudo` varchar(60) COLLATE utf8_bin NOT NULL,
   `name` varchar(1000) COLLATE utf8_bin NOT NULL,
   `firstname` varchar(1000) COLLATE utf8_bin NOT NULL,
   `adress` varchar(1000) COLLATE utf8_bin NOT NULL,
@@ -37,45 +38,44 @@ CREATE TABLE `clients` (
   `dateinscription` date NOT NULL,
   `admin` tinyint(4) NOT NULL,
   `client` tinyint(4) NOT NULL,
+  `user` tinyint(4) unsigned NOT NULL,
   `token` varchar(32) COLLATE utf8_bin NOT NULL COMMENT ' clé de vérification pour l''activation du compte',
-  `active` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=73 ;
+  `active` int(11) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=77 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Contenu de la table `clients`
+-- Dumping data for table `clients`
 --
 
-INSERT INTO `clients` (`id`, `name`, `firstname`, `adress`, `phone`, `email`, `mdp`, `dateinscription`, `admin`, `client`, `token`, `active`) VALUES
-(1, 'leaticia', 'casta', 'rue des frippiers, 25 - 1000 Bruxelles', '0478/25.32.10', 'l.casta@hotmail.com', 'd41d8cd98f00b204e9800998ecf8427e', '2015-07-07', 0, 1, '', NULL),
-(2, 'chantal', 'goya', 'rue des canons, 10- 3000 Namur', '0477/44.77.44', 'chantal.goya@mail.com', 'd41d8cd98f00b204e9800998ecf8427e', '2015-07-07', 0, 1, '', NULL),
-(3, 'Dupont', 'RenÃ©', 'rue des loups 5 1050 ixelles', '0485/26.32.58', 'dr@mail.com', 'd41d8cd98f00b204e9800998ecf8427e', '2015-07-07', 0, 1, '', NULL),
-(5, 'Nimo', 'Gero', 'rue de thÃ©atre 5 - 5000 NAmur', '0477/77.77.22', '', 'd41d8cd98f00b204e9800998ecf8427e', '2015-07-09', 0, 1, '', NULL),
-(16, 'jackson', 'janet', 'bd lady lady 10, 54892 los angeles', '454666516516', '', 'd41d8cd98f00b204e9800998ecf8427e', '2015-07-09', 0, 1, '', NULL),
-(25, 'Boncire', 'geraldine', 'rue des bleu 10 - 1200 bruxelles', '0489/25.36.21', '', '4a4efe2ba5e80ed550a9cf8f92260918', '2015-07-09', 0, 1, '', NULL),
-(41, 'lilianne', 'lilou', 'fkhqmkfhsqmfhq', '0125356', '', 'a8beae6f257a518f8aa3cbe02843da63', '2015-07-14', 0, 1, '', NULL),
-(55, 'Fourbe', 'Caroline', 'rue des alliÃ©es 337 - 1190 forest', '0484/65 63 02', 'f.harram@gmail.com', 'wW3QoKDR', '2015-08-14', 0, 1, '', 1),
-(71, 'Garcia', 'JosÃ©', 'Mechelsesteenweg, 10 - 1800 Vilvoorde', '02/890.32.25', 'garcia@mail.com', 'bd9c0dd8620f6a49ebd7f2176552d141', '2015-08-24', 0, 1, '', 1),
-(72, 'El Bouri', 'Ines', 'Strombeeksesteenweg, 13/5 - 1800 Vilvoorde', '0477894205', 'ines@mail.com', 'e559744627cceb9d06579d548b57bc01', '2015-09-01', 0, 1, '', 1);
+INSERT INTO `clients` (`id`, `pseudo`, `name`, `firstname`, `adress`, `phone`, `email`, `mdp`, `dateinscription`, `admin`, `client`, `user`, `token`, `active`) VALUES
+(1, '', 'leaticia', 'casta', 'rue des frippiers, 25 - 1000 Bruxelles', '0478/25.32.10', 'l.casta@hotmail.com', 'd41d8cd98f00b204e9800998ecf8427e', '2015-07-07', 0, 1, 0, '', NULL),
+(2, '', 'chantal', 'goya', 'rue des canons, 10- 3000 Namur', '0477/44.77.44', 'chantal.goya@mail.com', 'd41d8cd98f00b204e9800998ecf8427e', '2015-07-07', 0, 1, 0, '', NULL),
+(3, '', 'Dupont', 'RenÃ©', 'rue des loups 5 1050 ixelles', '0485/26.32.58', 'dr@mail.com', 'd41d8cd98f00b204e9800998ecf8427e', '2015-07-07', 0, 1, 0, '', NULL),
+(16, '', 'jackson', 'janet', 'bd lady lady 10, 54892 los angeles', '454666516516', 'jacksonjanet@gmail.com', '47d1f7554cef1019b11a590f5183f4ee', '2015-07-09', 0, 1, 0, '', NULL),
+(25, '', 'Boncire', 'geraldine', 'rue des bleu 10 - 1200 bruxelles', '0489/25.36.21', '', '4a4efe2ba5e80ed550a9cf8f92260918', '2015-07-09', 0, 1, 0, '', NULL),
+(41, '', 'lilianne', 'lilou', 'fkhqmkfhsqmfhq', '0125356', '', 'a8beae6f257a518f8aa3cbe02843da63', '2015-07-14', 0, 1, 0, '', NULL),
+(55, '', 'Fourbe', 'Caroline', 'rue des alliÃ©es 337 - 1190 forest', '0484/65 63 02', 'f.harram@gmail.com', '5f4dcc3b5aa765d61d8327deb882cf99', '2015-08-14', 0, 1, 0, '', 1),
+(71, '', 'Garcia', 'JosÃ©', 'Mechelsesteenweg, 10 - 1800 Vilvoorde', '02/890.32.25', 'garcia@mail.com', 'bd9c0dd8620f6a49ebd7f2176552d141', '2015-08-24', 0, 1, 0, '', 1),
+(72, '', 'El Bouri', 'Ines', '  Strombeeksesteenweg, 13/5 - 1800 Vilvoorde', '  0477894208', 'ines@mail.com', '47d1f7554cef1019b11a590f5183f4ee', '2015-09-01', 0, 1, 0, '', 1),
+(76, 'aka', 'aka test', 'aka', 'address', '0703456789', 'aka@gmail.com', '47d1f7554cef1019b11a590f5183f4ee', '2016-01-28', 1, 0, 0, 'a7ab3b144d07e241826c874f74f65cbb', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `comments`
+-- Table structure for table `comments`
 --
 
-CREATE TABLE `comments` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `comments` (
+`id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `user_pseudo` varchar(200) COLLATE utf8_bin NOT NULL,
   `user_mail` varchar(200) COLLATE utf8_bin NOT NULL,
   `comment` varchar(4000) COLLATE utf8_bin NOT NULL,
-  `datecomments` datetime NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=80 ;
+  `datecomments` datetime NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=80 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Contenu de la table `comments`
+-- Dumping data for table `comments`
 --
 
 INSERT INTO `comments` (`id`, `user_id`, `user_pseudo`, `user_mail`, `comment`, `datecomments`) VALUES
@@ -140,11 +140,11 @@ INSERT INTO `comments` (`id`, `user_id`, `user_pseudo`, `user_mail`, `comment`, 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `orders`
+-- Table structure for table `orders`
 --
 
-CREATE TABLE `orders` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `orders` (
+`id` int(11) NOT NULL,
   `id_client` int(11) NOT NULL,
   `name_client` varchar(255) COLLATE utf8_bin NOT NULL,
   `orderType` varchar(255) COLLATE utf8_bin NOT NULL,
@@ -158,12 +158,11 @@ CREATE TABLE `orders` (
   `livraisonValue` varchar(50) COLLATE utf8_bin NOT NULL,
   `facturValue` varchar(50) COLLATE utf8_bin NOT NULL,
   `facturationData` varchar(255) COLLATE utf8_bin NOT NULL,
-  `date` datetime NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=28 ;
+  `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Contenu de la table `orders`
+-- Dumping data for table `orders`
 --
 
 INSERT INTO `orders` (`id`, `id_client`, `name_client`, `orderType`, `orderDescr`, `orderLevel`, `briefingValue`, `envoiChValue`, `okChValue`, `designValue`, `prodValue`, `livraisonValue`, `facturValue`, `facturationData`, `date`) VALUES
@@ -171,28 +170,30 @@ INSERT INTO `orders` (`id`, `id_client`, `name_client`, `orderType`, `orderDescr
 (8, 63, 'chantal goya', 'print', 'affichage spectacle', 'Briefing', '100', '26', '0', '0', '0', '0', '0', '', '2015-08-14 03:34:28'),
 (23, 4, 'Harram Fatiha', 'all', 'Campagne complÃ¨te pour son image de marque', 'Envoi du cahier des charges', '100', '50', '0', '0', '0', '0', '0', '', '2015-08-16 14:46:02'),
 (25, 7, 'Fourbe Caroline', 'web', 'direction stratÃ©gique', 'RÃ©alisation du design/visuel', '100', '100', '100', '25', '0', '0', '0', '', '2015-08-16 15:13:15'),
-(26, 54, 'El Bouri Ines', 'print', 'CrÃ©ation et impression de faire-part de mariage.', 'Briefing', '100', '100', '100', '100', '30', '1', '0', 'img/facture501.pdf', '2015-08-22 01:28:42'),
-(27, 72, 'El Bouri Ines', 'design', 'Mise en forme et mise en page de son livre de naissance ainsi qu''une rÃ©flexion pour un design appropriÃ© de son livre de famille.', 'Acceptation du cahier des charges', '100', '100', '20', '0', '0', '0', '0', '', '2015-09-01 11:54:48');
+(26, 54, 'El Bouri Ines', 'print', 'CrÃ©ation et impression de faire-part de mariage.', 'Briefing', '100', '100', '100', '100', '30', '1', '0', 'facture.pdf', '2015-08-22 01:28:42'),
+(27, 72, 'El Bouri', 'design', 'jcjscn xajxajxa', 'En cours de livraison', '100', '100', '20', '0', '0', '85', '0', 'facture2.pdf', '2015-09-01 11:54:48'),
+(28, 16, 'jackson', 'strategie', 'kol kol', 'Facturation', '100', '100', '100', '100', '100', '100', '100', 'facture.pdf', '2016-01-28 20:45:26'),
+(36, 41, 'lilianne', 'design', 'working...', 'Facturation', '', '', '', '', '', '', '100', 'facture.pdf', '2016-01-29 12:41:19'),
+(37, 2, 'chantal', 'all', 'details...', 'Envoi du cahier des charges', '100', '100', '', '', '', '', '', '142306facture2.pdf', '2016-01-29 14:19:30');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `users`
+-- Table structure for table `users`
 --
 
-CREATE TABLE `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `users` (
+`id` int(11) NOT NULL,
   `email` varchar(200) COLLATE utf8_bin NOT NULL,
   `pseudo` varchar(200) COLLATE utf8_bin NOT NULL,
   `mdp` varchar(200) COLLATE utf8_bin NOT NULL,
   `dateinscription` date NOT NULL,
   `admin` tinyint(2) NOT NULL,
-  `client` tinyint(2) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=93 ;
+  `client` tinyint(2) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=93 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Contenu de la table `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `email`, `pseudo`, `mdp`, `dateinscription`, `admin`, `client`) VALUES
@@ -211,7 +212,7 @@ INSERT INTO `users` (`id`, `email`, `pseudo`, `mdp`, `dateinscription`, `admin`,
 (32, 'm.harram@mail.com', 'mous', '5cf8d152b0d18e40', '2015-03-31', 0, 0),
 (33, 'cal@mail.com', 'cal', '912b498a2f2f5913', '2015-04-02', 0, 0),
 (35, 'bibi@mail.com', 'bibi', '8115153332991997460b9f236e0da71a', '2015-04-07', 0, 0),
-(36, 'fatiha@mail.com', 'fatiha', 'bb44a3f3a09296023448d67ba273ae98', '2015-04-07', 1, 0),
+(36, 'fatiha@mail.com', 'fatiha', '47d1f7554cef1019b11a590f5183f4ee', '2015-04-07', 1, 0),
 (37, 'dieudo@mail.com', 'dieudo', '6dc9bb97a6a947d5d61b323f6cd11911', '2015-04-09', 0, 0),
 (38, 'lila@hotmail.com', 'lila', 'fda6ef9f6ba8382c875468cd70d33ecf', '2015-04-09', 0, 0),
 (39, 'imrane@gmail.com', 'imrane', '133369612750d3c253c28a98907f043d', '2015-04-09', 0, 0),
@@ -242,6 +243,58 @@ INSERT INTO `users` (`id`, `email`, `pseudo`, `mdp`, `dateinscription`, `admin`,
 (91, 'icil@mail.com', 'icil', '6b975332931678dcdf2ba2e125354802', '2015-09-02', 0, 0),
 (92, 'roland@gmail.com', 'roland', 'ee21d5f27a8401788147f6f6184ddb11', '2015-09-02', 0, 0);
 
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `clients`
+--
+ALTER TABLE `clients`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `comments`
+--
+ALTER TABLE `comments`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `clients`
+--
+ALTER TABLE `clients`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=77;
+--
+-- AUTO_INCREMENT for table `comments`
+--
+ALTER TABLE `comments`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=80;
+--
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=38;
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=93;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

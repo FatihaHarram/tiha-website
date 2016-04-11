@@ -24,7 +24,7 @@ include_once('meta_header.php');
 						<b><li><a id="deconnecter" href="deconnection.php"><input class="deconnecter" type="submit" value="SE DECONNECTER" ></a></li></b>';
 
 					if($_SESSION['admin'] == 1){
-						echo '<li><a class="aNav" href="Admin.php">ADMIN</a></li>';
+						echo '<li><a class="aNav" href="admin.php">ADMIN</a></li>';
 						
 					}
 					elseif ($_SESSION['client'] == 1 OR $_SESSION['user'] == 1) {

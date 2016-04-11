@@ -26,8 +26,8 @@ include_once('lib/php/fonction.php');
 
 				//$data['id'] = $code;
 				$data["value"] = $name.' '.$firstname;
-				$data["label"] = $name.' '.$firstname.' '.$id;
-
+				// $data["label"] = $name.' '.$firstname.' '.$id;
+				$data["label"] = $name;
 				//array_push($a_json, $a_json_row);
     			
     			array_push($array, $data['label']); // et on ajoute celles-ci à notre tableau

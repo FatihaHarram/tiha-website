@@ -32,40 +32,40 @@ include_once('nav.php');
 			//echo $mdp;
 			?>
 			<!--Fiche Client-->
-			<div id="fiche_client" > 
+			<!-- <div id="fiche_client" >  -->
 				<!--formulaire de la fiche client-->
-				<form  class="" id="add_client" name="add_client" method="POST" action="adminTRT.php" >
-					<header>
-			    		<h2>Fiche client</h2>
+				<!-- <form  class="" id="add_client" name="add_client" method="POST" action="adminTRT.php" > -->
+					<!-- <header> -->
+			    		<!-- <h2>Fiche client</h2> -->
 			    		<!--Fermeture du formulaire avec la croix-->
-			    		<span class="close" style=" position: absolute; margin-left: 72%; margin-top: -30%;"><img src="img/CloseX64.png"></span>
-			  		</header>
-					<fieldset>
-						<legend><h2 style="font-size:1em;">NOUVEAU CLIENT</h2></legend>
-						<label for="name">NAME</label>
-						<input class=""  id="name" type="text" name="name" value="" maxlength="200" placeholder=" Name" /><br>
+			    		<!-- <span class="close" style=" position: absolute; margin-left: 72%; margin-top: -30%;"><img src="img/CloseX64.png"></span> -->
+			  		<!-- </header> -->
+					<!-- <fieldset> -->
+						<!-- <legend><h2 style="font-size:1em;">NOUVEAU CLIENT</h2></legend> -->
+						<!-- <label for="name">NAME</label> -->
+						<!-- <input class=""  id="name" type="text" name="name" value="" maxlength="200" placeholder=" Name" /><br> -->
 
-						<label for="firstname">FIRSTNAME</label>
-						<input class=""  id="firstname" type="text" name="firstname" value="" maxlength="200" placeholder=" firstname" /><br>
+						<!-- <label for="firstname">FIRSTNAME</label> -->
+						<!-- <input class=""  id="firstname" type="text" name="firstname" value="" maxlength="200" placeholder=" firstname" /><br> -->
 
-						<label for="adress">ADRESS</label>
-						<input class=""  id="adress" type="text" name="adress" value="" maxlength="200" placeholder=" adress" /><br>
+						<!-- <label for="adress">ADRESS</label> -->
+						<!-- <input class=""  id="adress" type="text" name="adress" value="" maxlength="200" placeholder=" adress" /><br> -->
 
-						<label for="phone">PHONE</label>
-						<input class=""  id="phone" type="text" name="phone" value="" maxlength="200" placeholder=" phone" /><br>
+						<!-- <label for="phone">PHONE</label> -->
+						<!-- <input class=""  id="phone" type="text" name="phone" value="" maxlength="200" placeholder=" phone" /><br> -->
 
-						<label for="email">EMAIL</label>
-						<input class=""  id="email" type="email" name="email" value="" maxlength="200" placeholder=" email" /><br>
+						<!-- <label for="email">EMAIL</label> -->
+						<!-- <input class=""  id="email" type="email" name="email" value="" maxlength="200" placeholder=" email" /><br> -->
 
-						<label for="mdp">MOT DE PASSE</label>
-						<input class=""  id="mdp" type="password" name="mdp" value="<?php echo $mdp; ?>" maxlength="200" placeholder=" MDP"/><br>
+						<!-- <label for="mdp">MOT DE PASSE</label> -->
+						<!-- <input class=""  id="mdp" type="password" name="mdp" value="<?php echo $mdp; ?>" maxlength="200" placeholder=" MDP"/><br> -->
 						<!--input du formulaire-->
-						<input type="submit" name="add" value="ADD" id="add">
-					</fieldset>
-				</form>
+						<!-- <input type="submit" name="add" value="ADD" id="add"> -->
+					<!-- </fieldset> -->
+				<!-- </form> -->
 				<!--Bouton input pour montrer le formulaire-->
-				<input type="submit" name="show_clientForm" value="NOUVEAU CLIENT" id="show_clientForm" class="show_clientForm">
-			</div>
+				<!-- <input type="submit" name="show_clientForm" value="NOUVEAU CLIENT" id="show_clientForm" class="show_clientForm"> -->
+			<!-- </div> -->
 
 
 
@@ -92,7 +92,7 @@ include_once('nav.php');
 
 
 					<label id="name_client" for="name_client">Nom client</label>
-					<input type="text" id="name_client" class="name_client" name="name_client"  list="frameworks" value="" placeholder=" Nom du client" tabindex="2">
+					<input type="text" id="name_clientU" class="name_client" name="name_client"  list="frameworks" value="" placeholder=" Nom du client" tabindex="2">
 					<p></p>
 
 
@@ -115,56 +115,39 @@ include_once('nav.php');
 					</fieldset>
 
 					<fieldset>
-						<legend id="orderValue" class="desc">Niveau de la commande</legend>
-						<select id="orderValue" name="orderValue" style="color:black;" tabindex="4">
+						<legend id="orderLevel" class="desc">Niveau de la commande</legend>
+						<select id="orderLevelU" name="orderLevel" style="color:black;" tabindex="4">
 								<option value="option" style="color:black;">Choisir une option</option> <!-- 0% de la commande  -->
-							    <option value="Briefing" style="color:black;">Briefing</option>	<!-- 20% de la commande  -->
-							    <option value="EnvoiCH" style="color:black;">Envoi du cahier des charges</option>	<!-- 40% de la commande  -->
-							    <option value="AcceptCH" style="color:black;">Acceptation du cahier des charges</option>	<!-- 60% de la commande  -->
-							    <option value="prodValue" style="color:black;">En production</option>	<!-- 80% de la commande  -->
-							    <option value="livraison" style="color:black;">En cours de livraison</option>	<!-- 90% de la commande  -->
-							    <option value="facturation" style="color:black;">Facturation</option>	<!-- 100% de la commande  -->
+							    <option value="1" style="color:black;">Briefing</option>	<!-- 20% de la commande  -->
+							    <option value="2" style="color:black;">Envoi du cahier des charges</option>	<!-- 40% de la commande  -->
+							    <option value="3" style="color:black;">Acceptation du cahier des charges</option>	<!-- 60% de la commande  -->
+							    <option value="4" style="color:black;">En production</option>	<!-- 80% de la commande  -->
+							    <option value="5" style="color:black;">Réalisation du design/visuel</option>
+							    <option value="6" style="color:black;">En cours de livraison</option>	<!-- 90% de la commande  -->
+							    <option value="7" style="color:black;">Facturation</option>	<!-- 100% de la commande  -->
 						</select>	
 					</fieldset> 
 
+
 					<fieldset>
-					    <legend id="orderLevel" class="desc">Niveau de la commande</legend>
-
-					    <label for="orderLevel" id="orderLevel"> </label>
-
-						<label for="Briefing">Briefing</label> <br> 
-						<input type="text" id="briefingValue" name="briefingValue" value="" maxlength="200" placeholder=" %" style=" float: right; position: absolute;width: 15%; height: 2%; left:75%;">
-						<input type="radio" id="Briefing" name="orderLevel" value="Briefing" tabindex="4" checked>
-
-						<label for="EnvoiCH">Envoi du cahier des charges </label><br>
-						<input type="text" id="envoiChValue" name="envoiChValue" value="" maxlength="200" placeholder=" %" style=" float: right; position: absolute;	width: 15%; height: 2%; left:75%;">
-						<input type="radio" id="EnvoiCH" name="orderLevel"  value="Envoi du cahier des charges" tabindex="5">
-						
-						<label for="AcceptCH">Acceptation du cahier des charges</label> <br>
-						<input type="text" id="okChValue" name="okChValue" value="" maxlength="200" placeholder=" %" style=" float: right; position: absolute;	width: 15%; height: 2%; left:75%;">
-						<input type="radio" id="AcceptCH" name="orderLevel" value="Acceptation du cahier des charges" tabindex="6">
-						
-						<label for="design">Réalisation du design/visuel</label> <br>
-						<input type="text" id="designValue" name="designValue" value="" maxlength="200" placeholder=" %" style=" float: right; position: absolute;	width: 15%; height: 2%; left:75%;">
-						<input type="radio" id="design" name="orderLevel" value="Réalisation du design/visuel" tabindex="7">
-						
-						<label for="production">En production</label> <br>
-						<input type="text" id="prodValue" name="prodValue" value="" maxlength="200" placeholder=" %" style=" float: right; position: absolute;	width: 15%; height: 2%; left:75%;">
-						<input type="radio" id="production" name="orderLevel" value="En production" tabindex="8">
-						
-						<label for="livraison">En cours de livraison</label> <br>
-						<input type="text" id="livraisonValue" name="livraisonValue" value="" maxlength="200" placeholder=" %" style=" float: right; position: absolute;	width: 15%; height: 2%; left:75%;">
-						<input type="radio" id="livraison" name="orderLevel"  value="En cours de livraison" tabindex="9">
-						
-						<label for="facturation">Facturation</label> <br>
-						<input type="text" id="facturValue" name="facturValue" value="" maxlength="200" placeholder=" %" style=" float: right; position: absolute;	width: 15%; height: 2%; left:75%;">
-						<input type="radio" id="facturation" name="orderLevel"  value="Facturation" tabindex="10">
+						<legend id="orderValue" class="desc">Percentage</legend>
+						<select id="orderValueU" name="orderValue" style="color:black;" tabindex="4">
+								<?php
+								for ($i=1; $i <= 100 ; $i++) { 
+									echo "<option value='";
+									echo $i;
+									echo "'>";
+									echo $i;
+									echo "</option>";
+								}
+								?>
+						</select>	
 					</fieldset>
 
 					<fieldset>
 						<legend>Facturation</legend>
 						<input type="hidden" name="MAX_FILE_SIZE" value="100000"/> Ajout d'une facture <input type="file" name="facture" id="facture" tabindex="11"/>
-						<input type="text" name="facturationData" value="facture/" placeholder="facture" id="facturationData"> 
+						<input type="hidden" name="facturationData" value="facture/" placeholder="facture" id="facturationData"> 
 				
 					</fieldset>
 					<!--Submit du formulaire-->
@@ -184,17 +167,17 @@ include_once('nav.php');
 				<input type="submit" name="changeOrder" id="changeOrder" value="MODIFIER COMMANDE EXISTANTE"  class="show_changeOrder">
 				
 				<!--Formulaire de la fiche commande-->
-				<form class="" id="changeOrderForm" name="add_order" method="POST" action="adminTRTchange.php"  >
+				<form class="" id="changeOrderForm" name="add_order" method="POST" action="adminTRTchange.php" enctype="multipart/form-data" >
 					<!--Fermeture du formulaire avec la croix-->
 					<span class="close2" style=" position: absolute; margin-left: 85%; margin-top: -3%;"><img src="img/CloseX64.png"></span>
 			 		
 			    	<h2>Modification commande</h2>
 					<label id="orders" for="orders">n° de commande</label> <!--id client -->
-					<input type="text" class="" id="id" name="id"  value="<?php ?>" placeholder=" ID de la commande" tabindex="1">
+					<input type="text" class="" id="id_clientL" name="id"  value="" placeholder=" ID de la commande" tabindex="1">
 					<span id="msgbox"></span><br>
 
 					<label id="name_client" for="name_client">Nom client</label>
-					<input type="text" id="name_client" name="name_client"  value="<?php ?>" placeholder=" Nom du client" tabindex="2">
+					<input type="text" id="name_clientL"  class="name_client" name="name_client"  value="" placeholder=" Nom du client" tabindex="2">
 
 					<fieldset>
 						<legend>Type de commandes</legend>
@@ -215,41 +198,39 @@ include_once('nav.php');
 					</fieldset>
 
 					<fieldset>
-					    <legend id="orderLevel" class="desc">Niveau de la commande</legend>
+						<legend id="orderLevel" class="desc">Niveau de la commande</legend>
+						<select id="orderLevelL" name="orderLevel" style="color:black;" tabindex="4">
+								<option value="option" style="color:black;">Choisir une option</option> <!-- 0% de la commande  -->
+							    <option value="1" style="color:black;">Briefing</option>	<!-- 20% de la commande  -->
+							    <option value="2" style="color:black;">Envoi du cahier des charges</option>	<!-- 40% de la commande  -->
+							    <option value="3" style="color:black;">Acceptation du cahier des charges</option>	<!-- 60% de la commande  -->
+							    <option value="4" style="color:black;">En production</option>	<!-- 80% de la commande  -->
+							    <option value="5" style="color:black;">Réalisation du design/visuel</option>
+							    <option value="6" style="color:black;">En cours de livraison</option>	<!-- 90% de la commande  -->
+							    <option value="7" style="color:black;">Facturation</option>	<!-- 100% de la commande  -->
+						</select>	
+					</fieldset> 
 
-						<label for="Briefing">Briefing</label> <br> 
-						<input type="text" id="briefingValue" name="briefingValue" value="" maxlength="200" placeholder=" %" style=" float: right; position: absolute;width: 15%; height: 2%; left:75%;">
-						<input type="radio" id="Briefing" name="orderLevel" value="Briefing" tabindex="4" checked>
 
-						<label for="EnvoiCH">Envoi du cahier des charges </label><br>
-						<input type="text" id="envoiChValue" name="envoiChValue" value="" maxlength="200" placeholder=" %" style=" float: right; position: absolute;	width: 15%; height: 2%; left:75%;">
-						<input type="radio" id="EnvoiCH" name="orderLevel"  value="Envoi du cahier des charges" tabindex="5">
-						
-						<label for="AcceptCH">Acceptation du cahier des charges</label> <br>
-						<input type="text" id="okChValue" name="okChValue" value="" maxlength="200" placeholder=" %" style=" float: right; position: absolute;	width: 15%; height: 2%; left:75%;">
-						<input type="radio" id="AcceptCH" name="orderLevel" value="Acceptation du cahier des charges" tabindex="6">
-						
-						<label for="design">Réalisation du design/visuel</label> <br>
-						<input type="text" id="designValue" name="designValue" value="" maxlength="200" placeholder=" %" style=" float: right; position: absolute;	width: 15%; height: 2%; left:75%;">
-						<input type="radio" id="design" name="orderLevel" value="Réalisation du design/visuel" tabindex="7">
-						
-						<label for="production">En production</label> <br>
-						<input type="text" id="prodValue" name="prodValue" value="" maxlength="200" placeholder=" %" style=" float: right; position: absolute;	width: 15%; height: 2%; left:75%;">
-						<input type="radio" id="production" name="orderLevel" value="En production" tabindex="8">
-						
-						<label for="livraison">En cours de livraison</label> <br>
-						<input type="text" id="livraisonValue" name="livraisonValue" value="" maxlength="200" placeholder=" %" style=" float: right; position: absolute;	width: 15%; height: 2%; left:75%;">
-						<input type="radio" id="livraison" name="orderLevel"  value="En cours de livraison" tabindex="9">
-						
-						<label for="facturation">Facturation</label> <br>
-						<input type="text" id="facturValue" name="facturValue" value="" maxlength="200" placeholder=" %" style=" float: right; position: absolute;	width: 15%; height: 2%; left:75%;">
-						<input type="radio" id="facturation" name="orderLevel"  value="Facturation" tabindex="10">
+					<fieldset>
+						<legend id="orderValue" class="desc">Percentage</legend>
+						<select id="orderValueL" name="orderValue" style="color:black;" tabindex="4">
+								<?php
+								for ($i=1; $i <= 100 ; $i++) { 
+									echo "<option value='";
+									echo $i;
+									echo "'>";
+									echo $i;
+									echo "</option>";
+								}
+								?>
+						</select>	
 					</fieldset>
 
 					<fieldset>
 						<legend>Facturation</legend>
-						<!-- <input type="hidden" name="MAX_FILE_SIZE" value="100000"/> Ajout d'une facture <input type="file" name="facture" id="facture" tabindex="11"/>-->
-						<input type="text" name="facturationData" value="facture/" placeholder="facture" id="facturationData">
+						 <input type="hidden" name="MAX_FILE_SIZE" value="100000"/> Ajout d'une facture <input type="file" name="facture" id="facture" tabindex="11"/>
+						<input type="hidden" name="facturationData" value="facture/" placeholder="facture" id="facturationData">
 					</fieldset>
 					<!--Submit du formulaire-->
 					<input type="submit" id="change" name="change" value="MODIFIER" tabindex="15">
